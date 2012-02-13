@@ -47,15 +47,20 @@ img {
 	position:absolute;
 	right:310px;
 }
-
+input {
+	background:#29b7db;
+	color:black;
+	font-weight:bold;
+	height:27px;
+}
 input:hover {
 	background:black;
-	color:white;
+	color:#29b7db;
   }
   
 input:focus {
 	background:black; 
-	color:white;
+	color:#29b7db;
 }
 /*
 .h1_home {
