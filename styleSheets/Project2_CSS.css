@@ -62,6 +62,16 @@ input:focus {
 	background:black; 
 	color:#29b7db;
 }
+
+.red {
+	background-color:red;
+	color:white;
+}
+
+.blue {
+	background-color:blue;
+	color:white;
+}
 /*
 .h1_home {
 	color:white;
