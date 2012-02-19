@@ -1,13 +1,14 @@
 body {
-	background-color:black;
+	background-color:#eae289;
 }
 
 .div1 {
-	background-color:red;
+	background-color:#000000;
 	float:left;
 	padding:10px;
+	width:300;
+	height:300;
 	text-align:center;
-	border:2px solid #FFFFFF;
 }
 
 .div2 {
@@ -20,6 +21,13 @@ body {
 
 .h1 {
 	color:white;
+}
+
+.h1back {
+	background-color:#eae289;
+	height:250px;
+	width:250px;
+	float:left;
 }
 
 h3 {
@@ -43,22 +51,42 @@ h3 {
 	font-weight:bold;
 }
 
-img {
+.img {
 	position:absolute;
 	right:310px;
 }
+
 input {
 	background:#29b7db;
 	color:black;
 	font-weight:bold;
 	height:27px;
+	right:700px;
 }
+
 input:hover {
 	background:black;
 	color:#29b7db;
-  }
-  
+}
+ 
 input:focus {
+	background:black; 
+	color:#29b7db;
+}
+
+button {
+	background:#29b7db;
+	color:black;
+	font-weight:bold;
+	height:27px;
+}
+
+button:hover {
+	background:black;
+	color:#29b7db;
+}
+ 
+button:focus {
 	background:black; 
 	color:#29b7db;
 }
