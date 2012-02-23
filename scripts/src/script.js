@@ -73,7 +73,7 @@ function main() {
 		
 		//Check to see which grade you'll make after the count is over 10
 		if ((aCount>bCount && aCount>cCount && aCount>dCount && aCount>fCount) && aCount>10) {
-			alert("Wow you are one smart student. Your grade is an A, you superstar you!");
+			alert("Wow you are one smart person. Your grade is an A, you superstar you!");
 		}
 		
 		else if ((bCount>aCount && bCount>cCount && bCount>dCount && bCount>fCount) && bCount>10) {
