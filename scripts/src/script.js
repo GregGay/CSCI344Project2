@@ -13,7 +13,7 @@ function main() {
 	var search = $("#term").val();
 	var s = new Spotter("twitter.search", 
 						{q: search, period:750},
-						{buffer:true, bufferTimeout:5000}
+						{buffer:true, bufferTimeout:6000}
 					    );
 	
 	s.register(function(tweet) {
@@ -44,9 +44,6 @@ function main() {
 			//alert(tweet.text);
 			aCount=aCount+1;
 			$("#A").text(aCount);
-				if (aCount===2) {
-					alert("Congrats A has came up the most which means...your grade is an A!");
-				}
 		}
 
 		if (tweet.text.match(/b/gi)) {
@@ -71,16 +68,50 @@ function main() {
 			//alert(tweet.text);
 			fCount=fCount+1;
 			$("#F").text(fCount);
-		}		
+		}
+		
+		//Check to see which grade you'll make after the count is over 10
+		if ((aCount>bCount && aCount>cCount && aCount>dCount && aCount>fCount) && aCount>10) {
+			alert("Wow you are one smart student. Your grade is an A, you superstar you!");
+		}
+		
+		else if ((bCount>aCount && bCount>cCount && bCount>dCount && bCount>fCount) && bCount>10) {
+			alert("You got a B. But that's not an A now is it.");
+		}
+		
+		else if ((cCount>aCount && cCount>bCount && cCount>dCount && cCount>fCount ) && aCount>10) {
+			alert("C, really? I guess I'll be 'Cing' you tomorrow morning for that review session.");
+		}
+		
+		else if ((dCount>aCount && dCount>bCount && dCount>bCount && dCount>fCount ) && aCount>10) {
+			alert("D!!! Way to go buddy, way to go and screw everything up!");
+		}
+	
+		else if ((fCount>aCount && fCount>bCount && fCount>cCount && fCount>dCount ) && aCount>10) {
+			alert("Well F you too! I don't like Failures, and I hope you don't either.");
+		}
+		
+		else {
+			if (aCount>10||bCount>10||cCount>10||dCount>10||fCount>10) {
+				alert("Not good! You'll have to retry or you'll end up getting an Incomplete.");
+				s.stop();
+			}
+		}
 		
 		object_array.push(slide);
 		
 		if(object_array.length >= 1) {
 			var object_to_remove = object_array.shift();
-			object_to_remove.fadeOut(6000, function() {
+			object_to_remove.fadeOut(7000, function() {
 				object_to_remove.remove();
 			});
 		}
+		
+		/*
+		if(aCount =10|| bCount =10|| cCount=10 || dCount =10|| fCount=10) {
+		
+		}
+		*/
 	});
 	
 	s.start();
