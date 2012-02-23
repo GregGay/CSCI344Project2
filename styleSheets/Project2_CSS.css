@@ -31,8 +31,8 @@ body {
 }
 
 h3 {
-	color:#29b7db;
-	font:23 comic sans ms;
+	color:#000000;
+	font:23px Arial;
 	font-weight:bold;
 }
 
@@ -40,20 +40,21 @@ h3 {
 	float:left;
 	padding:15px;
 	background-color:white;
-	color:#29b7db;
+	color:#000000;
 	width:960px;
 	height:300px;
-	border:3px solid #29b7db;
+	border:3px solid #000000;
 }
 
 .colTable{
-	position:relative;
-	top:20px;
+	position:absolute;
+	top:25px;
+	right:300px;
 }
 
 .textStyle {
 	color:#29b7db;
-	font:17px comic sans ms;
+	font:17px Arial;
 	font-weight:bold;
 }
 
@@ -108,12 +109,15 @@ button:focus {
 }
 
 .searchAgain {
+	left:500px;
 	visibility:hidden;
 }
 
 table {
 	width:200px;
 	border:2px solid #000000;
+	font:12px Arial;
+	font-weight:bold;
 }
 
 tr {
@@ -126,5 +130,5 @@ td {
 }
 
 th {
-	width:150px;
+	width:200px;
 }
