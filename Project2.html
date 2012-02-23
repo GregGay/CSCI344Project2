@@ -1,18 +1,19 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
 	<title>TWEET-UP</title>
-	<!--- styles --->
+	
+	<!-- styles -->
 	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="mystyle.css" />
 	<link rel="stylesheet" type="text/css" href="styleSheets/Project2_CSS.css" />
 	<link rel="shortcut icon" type="image/x-icon" href="Project2Pics/Crimson_Omens.jpg" /> 
 	
-	<!--- libraries --->
+	<!-- libraries -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>	
 	<script src="scripts/lib/spotter.js"></script>
 	
-	<!--- JavaScript --->
+	<!-- JavaScript -->
     <script src="scripts/src/script.js"></script>
 	
 	<script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-modal.js"></script>	
@@ -20,24 +21,66 @@
 <body>
 	<div class="container">
 		<div class="row h1back">
-			<div "span16">
+			<div class="span11">
 				<a href="file:///C:/Users/Gregory/CSCI344Project2/Project2.html"><img src="Project2Pics/logo2.jpg" alt="Logo" width="250" height="250" /></a>
+			</div>
+			<div class="colTable">
+				<table>
+					<tr>
+					<th>Grade Report!</th>
+					<th></th>
+					</tr>
+					<tr>
+					<td>A</td>
+					<td id="a"></td>
+					</tr>
+					<tr>
+					<td>B</td>
+					<td id="b"></td>
+					</tr>
+					<tr>
+					<td>C</td>
+					<td id="c"></td>
+					</tr>
+					<tr>
+					<td>D</td>
+					<td id="d"></td>
+					</tr>
+					<tr>
+					<td>F</td>
+					<td id="f"></td>
+					</tr>
+				</table> 
 			</div>
 		</div>
 	</div>	
 	<br/>
-	<div class="container">
+	<br/>
+	<br/>
+	<div class="container" id="hide">
 		<div class="row">
 			<div class="SearchColumn">
 				<h3>Welcome to TWEET-UP where you can search real-time content from Twitter!</h3>
-				<br/><br/>
+				<br/>
 				<input type="text" placeholder="Search for anything!" id="term" />
 				<br/>
 				<img class="img" src="Project2Pics/twitterBird.jpg" alt="facebook" width="270" height="200" />
 				<br/>
-				<a href="file:///C:/Users/Gregory/CSCI344Project2/Project2_Search.html"><button id="SEARCH">GO@!</button></a>		
+				<input type="submit" value="GO!" id="Search" />
 			</div>
 		</div>
 	</div>
+	<br/>
+	<br/>
+	<div class="container">
+		<div class="row">
+			<div id="tweets">
+			</div>
+			<div class="searchAgain">
+				<a href="file:///C:/Users/Gregory/CSCI344Project2/Project2.html"><input type="submit" value="Search Again!" id="searchAgain"/></a>
+			</div>			
+		</div>
+	</div>
+	<br/><br/><br/>
 </body>
 </html>
