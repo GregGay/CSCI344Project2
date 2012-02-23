@@ -39,7 +39,8 @@ function main() {
 			slide.hide();
 			$("#tweets").prepend(slide);
 			slide.slideDown();
-	
+		
+		//Counts all a, b, c, d, and f
 		if (tweet.text.match(/a/gi)) {
 			//alert(tweet.text);
 			aCount=aCount+1;
@@ -94,7 +95,6 @@ function main() {
 		else {
 			if (aCount>10||bCount>10||cCount>10||dCount>10||fCount>10) {
 				alert("Not good! You'll have to retry or you'll end up getting an Incomplete.");
-				s.stop();
 			}
 		}
 		
@@ -106,12 +106,7 @@ function main() {
 				object_to_remove.remove();
 			});
 		}
-		
-		/*
-		if(aCount =10|| bCount =10|| cCount=10 || dCount =10|| fCount=10) {
-		
-		}
-		*/
+
 	});
 	
 	s.start();
