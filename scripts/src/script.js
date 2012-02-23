@@ -2,12 +2,18 @@ function main() {
 	
 	var count = 0;
 	var object_array=[];
+
+	var aCount=0;
+	var bCount=0;
+	var cCount=0;
+	var dCount=0;
+	var fCount=0;
 	
 	//Have to call on search in the Spotter function
 	var search = $("#term").val();
 	var s = new Spotter("twitter.search", 
-						{q: search, period:150},
-						{buffer:true, bufferTimeout:1000}
+						{q: search, period:750},
+						{buffer:true, bufferTimeout:5000}
 					    );
 	
 	s.register(function(tweet) {
@@ -30,70 +36,48 @@ function main() {
 		}
 		
 		var slide = $("<p class='"+color+" id="+count+"'>"+profile_image+tweet.text+"</p>");
-			slide.hide(10000);
+			slide.hide();
 			$("#tweets").prepend(slide);
 			slide.slideDown();
 	
-	var aCount=0;
 		if (tweet.text.match(/a/gi)) {
 			//alert(tweet.text);
 			aCount=aCount+1;
-			$("#a").text(aCount);
-			/*var obj_array.length=[];
-			if(obj_array.length >= 1) {
-				var obj_to_remove = obj_array.shift();
-				obj_to_remove.fadeOut(200, function() {
-					obj_to_remove.remove();
-				});
-			}*/
-			/*
-			String.prototype.countOccurrences = function(a) {
-			var counter=0;
-			for(var i = 0; i < this.length; i++){
-				if(this.charAt(i) == a){
-					counter++;
-				 }
-			}
-			return counter;
-			$().prepend(a);
-		};*/
+			$("#A").text(aCount);
+				if (aCount===2) {
+					alert("Congrats A has came up the most which means...your grade is an A!");
+				}
 		}
 
-	var bCount=0;
 		if (tweet.text.match(/b/gi)) {
 			//alert(tweet.text);
 			bCount=bCount+1;
-			$("#b").text(bCount);
+			$("#B").text(bCount);
 		}
 		
-	var cCount=0;
 		if (tweet.text.match(/c/gi)) {
 			//alert(tweet.text);
 			cCount=cCount+1;
-			$("#c").text(cCount);
+			$("#C").text(cCount);
 		}
-	
-	var dCount=0;
+
 		if (tweet.text.match(/d/gi)) {
 			//alert(tweet.text);
 			dCount=dCount+1;
-			$("#d").text(dCount);
+			$("#D").text(dCount);
 		}
-	
-	var fCount=0;
+
 		if (tweet.text.match(/f/gi)) {
 			//alert(tweet.text);
 			fCount=fCount+1;
-			$("#f").text(fCount);
-		}
-		
-		
+			$("#F").text(fCount);
+		}		
 		
 		object_array.push(slide);
 		
 		if(object_array.length >= 1) {
 			var object_to_remove = object_array.shift();
-			object_to_remove.fadeOut(2000, function() {
+			object_to_remove.fadeOut(6000, function() {
 				object_to_remove.remove();
 			});
 		}
